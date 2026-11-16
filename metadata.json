@@ -1,0 +1,6 @@
+{
+  "name": "Trackshift",
+  "description": "Minimalist cross-platform playlist transfer studio for Spotify, Apple Music, YouTube Music, and SoundCloud.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
