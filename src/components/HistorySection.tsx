@@ -1,7 +1,7 @@
 import React from 'react';
 import {ArrowRight, Download, ExternalLink, RotateCcw, Trash2} from 'lucide-react';
 import type {TransferHistoryEntry} from '../types';
-import {PLATFORM_MAP, PlatformLogo, downloadPlaylistExport} from '../data/platforms';
+import {PLATFORM_MAP, PlatformLogo, downloadPlaylistExport} from '../lib/platforms';
 
 interface HistorySectionProps {
   entries: TransferHistoryEntry[];

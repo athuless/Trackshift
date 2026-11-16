@@ -1,5 +1,5 @@
 import React from 'react';
-import {PLATFORMS, PlatformLogo} from '../data/platforms';
+import {PLATFORMS, PlatformLogo} from '../lib/platforms';
 import type {PlatformId} from '../types';
 
 interface PlatformsSectionProps {

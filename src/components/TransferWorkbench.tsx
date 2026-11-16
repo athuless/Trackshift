@@ -31,7 +31,7 @@ import {
   downloadPlaylistExport,
   formatDuration,
   formatTotalDuration,
-} from '../data/platforms';
+} from '../lib/platforms';
 
 interface TransferWorkbenchProps {
   sourcePlatform: PlatformId;

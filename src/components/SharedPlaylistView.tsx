@@ -19,7 +19,7 @@ import {
   downloadPlaylistExport,
   formatDuration,
   formatTotalDuration,
-} from '../data/platforms';
+} from '../lib/platforms';
 
 interface SharedPlaylistViewProps {
   shareId: string;
