@@ -180,7 +180,7 @@ export function SharedPlaylistView({shareId, onNavigateHome}: SharedPlaylistView
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] text-neutral-900">
+    <div className="min-h-screen flex flex-col bg-[#FAFAFA] text-neutral-900">
       <header className="sticky top-0 z-30 bg-[#FAFAFA]/90 backdrop-blur-md border-b border-neutral-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
           <button
@@ -203,7 +203,7 @@ export function SharedPlaylistView({shareId, onNavigateHome}: SharedPlaylistView
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+      <main className="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-10">
         {loading ? (
           <div className="bg-white border border-neutral-200 rounded-2xl p-12 flex items-center justify-center gap-3 text-sm text-neutral-500">
             <Loader2 className="w-4 h-4 animate-spin" />
@@ -492,6 +492,23 @@ export function SharedPlaylistView({shareId, onNavigateHome}: SharedPlaylistView
           </div>
         )}
       </main>
+
+      <footer className="border-t border-neutral-200 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-neutral-500">
+          <div className="flex items-center gap-2">
+            <span className="font-display font-semibold text-neutral-900">Trackshift</span>
+            <span aria-hidden="true">·</span>
+            <span>© 2026 · Built by <span className="font-medium text-neutral-800">Athul S</span></span>
+          </div>
+          <button
+            type="button"
+            onClick={onNavigateHome}
+            className="text-neutral-600 hover:text-neutral-900 transition-colors cursor-pointer"
+          >
+            Create your own playlist link
+          </button>
+        </div>
+      </footer>
     </div>
   );
 }

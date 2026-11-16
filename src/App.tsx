@@ -120,10 +120,12 @@ export default function App() {
 
       <footer className="border-t border-neutral-200 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-500">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="font-display font-semibold text-neutral-900">Trackshift</span>
             <span aria-hidden="true">·</span>
             <span>Spotify, Apple Music, YouTube Music & SoundCloud</span>
+            <span aria-hidden="true">·</span>
+            <span>© 2026 · Built by <span className="font-medium text-neutral-800">Athul S</span></span>
           </div>
           <div className="flex items-center gap-6">
             <a href="#workbench" className="hover:text-neutral-900 transition-colors">
