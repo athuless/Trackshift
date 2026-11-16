@@ -895,6 +895,25 @@ async function startServer() {
   const app = express();
   app.use(express.json({limit: '2mb'}));
 
+  app.get('/robots.txt', (req, res) => {
+    const baseUrl = getAppBaseUrl(req);
+    res.type('text/plain').send(`User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: ${baseUrl}/sitemap.xml\n`);
+  });
+
+  app.get('/sitemap.xml', (req, res) => {
+    const baseUrl = getAppBaseUrl(req);
+    res.type('application/xml').send(
+      `<?xml version="1.0" encoding="UTF-8"?>\n` +
+        `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+        `  <url>\n` +
+        `    <loc>${baseUrl}/</loc>\n` +
+        `    <changefreq>weekly</changefreq>\n` +
+        `    <priority>1.0</priority>\n` +
+        `  </url>\n` +
+        `</urlset>\n`
+    );
+  });
+
   // Public Playlist Link Parser
   app.post('/api/playlist/parse', async (req, res) => {
     const {url, text, sourcePlatform} = req.body as {
